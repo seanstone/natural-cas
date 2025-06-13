@@ -1,0 +1,6 @@
+/target
+/pkg
+node_modules/
+.parcel-cache/
+logs/
+old_logs/

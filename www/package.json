@@ -1,0 +1,26 @@
+{
+  "scripts": {
+    "dev": "parcel serve index.html --hmr-port=1235",
+    "build": "parcel build index.html",
+    "postinstall": "patch-package"
+  },
+  "dependencies": {
+    "@tailwindcss/postcss": "^4.1.8",
+    "daisyui": "^5.0.43",
+    "html2canvas": "^1.4.1",
+    "reconnecting-websocket": "^4.4.0",
+    "tailwind-merge": "^3.3.1",
+    "tailwindcss-animate": "^1.0.7"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.4.21",
+    "buffer": "^6.0.3",
+    "parcel": "^2.15.2",
+    "patch-package": "^8.0.0",
+    "postcss": "^8.5.4",
+    "posthtml-include": "^2.0.1",
+    "process": "^0.11.10",
+    "svgo": "^3.3.2",
+    "tailwindcss": "^4.1.8"
+  }
+}

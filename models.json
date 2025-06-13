@@ -1,0 +1,41 @@
+{
+    "providers": {
+        "anthropic": { "baseURL": "https://api.anthropic.com/v1/", "apiKey_env": "ANTHROPIC_API_KEY" },
+        "deepseek": { "baseURL": "https://api.deepseek.com", "apiKey_env": "DEEPSEEK_API_KEY" },
+        "fireworks": { "baseURL": "https://api.fireworks.ai/inference/v1", "model_prefix": "accounts/fireworks/models/", "apiKey_env": "FIREWORKS_API_KEY" },
+        "gemini": { "baseURL": "https://generativelanguage.googleapis.com/v1beta/openai/", "apiKey_env": "GOOGLE_API_KEY" },
+        "ollama": { "baseURL": "http://localhost:11434/v1", "apiKey_env": "OPENAI_API_KEY" },
+        "openai": { "apiKey_env": "OPENAI_API_KEY" },
+        "xai": { "baseURL": "https://api.x.ai/v1", "apiKey_env": "XAI_API_KEY" }
+    },
+
+    "models": {
+        "gpt-4.1": { "provider": "openai" },
+        "gpt-4.1-mini": { "provider": "openai" },
+        "gpt-4.1-nano": { "provider": "openai" },
+        "gpt-4o": { "provider": "openai" },
+        "grok-3": { "provider": "xai" },
+        "grok-3-mini": { "provider": "xai" },
+        "gemini-2.5-flash-preview-05-20": { "provider": "gemini" },
+        "gemini-2.0-flash": { "provider": "gemini" },
+        "gemini-2.0-flash-lite": { "provider": "gemini" },
+        "claude-opus-4-20250514": { "provider": "anthropic" },
+        "claude-sonnet-4-20250514": { "provider": "anthropic" },
+        "claude-3-7-sonnet-20250219": { "provider": "anthropic" },
+        "claude-3-5-haiku-20241022": { "provider": "anthropic" },
+        "claude-3-haiku-20240307": { "provider": "anthropic" },
+        "qwen3-235b-a22b": { "provider": "fireworks", "prefix": "\\no_think " },
+        "llama-v3p1-405b-instruct": { "provider": "fireworks" },
+        "llama4-maverick-instruct-basic": { "provider": "fireworks" },
+        "llama4-scout-instruct-basic": { "provider": "fireworks" },
+        "deepseek-v3-0324": { "provider": "fireworks" },
+        "deepseek-v3": { "provider": "fireworks" },
+        "mixtral-8x22b-instruct": { "provider": "fireworks" },
+        "deepseek-chat": { "provider": "deepseek" },
+        "granite3.3:2b": { "provider": "ollama" },
+        "hermes3:3b": { "provider": "ollama" },
+        "qwen3:4b": { "provider": "ollama", "prefix": "\\no_think " },
+        "qwen3:8b": { "provider": "ollama", "prefix": "\\no_think " },
+        "llama3.1:8b": { "provider": "ollama" }
+    }
+}
