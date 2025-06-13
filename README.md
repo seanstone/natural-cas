@@ -13,3 +13,5 @@ Fill in `auth.json`.
 ```console
 ./server.mjs
 ```
+
+Navigate to http://localhost:3000
