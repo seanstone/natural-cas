@@ -193,6 +193,9 @@ init_input()
             }
         }
     });
+
+    document.getElementById('input').value = `Simplify the A = ... expression.
+    When calling the functions, please use actual ids inferred from calling the list() and meta() functions, and not ids from the example.`;
 }
 
 async submit()

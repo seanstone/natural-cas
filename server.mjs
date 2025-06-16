@@ -6,7 +6,8 @@ import path from 'path';
 import { WebSocketServer } from 'ws';
 import { fileURLToPath } from 'url';
 import Models from './models.json' with { type: 'json' };
-import Assistant from "./src/algebra-assistant.mjs";
+// import Assistant from "./src/algebra-assistant.mjs";
+import Assistant from './src/cas-assistant.mjs';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);

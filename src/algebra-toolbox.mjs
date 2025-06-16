@@ -1,6 +1,6 @@
 "use strict";
 
-export default class CASToolbox
+export default class AlgebraToolbox
 {
 
 tools = [
