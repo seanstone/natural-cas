@@ -148,7 +148,7 @@ export default class Assistant
                 const data = await readFile(filePath, 'utf-8');
                 const parsed = JSON.parse(data);
                 const name = filename.replace(/\.json$/, "");
-                const assistant = Assistant.chats[name] = new Assistant(parsed.model);
+                const assistant = this.chats[name] = new this(parsed.model);
                 assistant.name = name;
                 assistant.messages = parsed.messages;
             }

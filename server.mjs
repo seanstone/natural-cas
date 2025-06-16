@@ -54,6 +54,7 @@ app.post('/api/chat', async (req, res) => {
         Assistant.chats[name].on_message = (name, message) => on_message(name, message);
     }
     await Assistant.chats[name].chat(req.body.message);
+    Assistant.chats[name].save();
     res.json({});
 });
 
