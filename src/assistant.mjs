@@ -45,7 +45,9 @@ export default class Assistant
         this.model = model;
         this.name = `${model}_${getFormattedTimestamp()}`;
         const provider = Models.providers[Models.models[this.model].provider];
-        this.#llm = new OpenAI({ apiKey: Auth[provider.apiKey_env], baseURL: provider.baseURL });
+        const apiKey = process.env[provider.apiKey_env] ?? Auth[provider.apiKey_env];
+        if (!apiKey) console.error(`Failed to get ${provider.apiKey_env}`);
+        this.#llm = new OpenAI({ apiKey: apiKey, baseURL: provider.baseURL });
     }
 
     prompt(content)
@@ -151,7 +153,7 @@ export default class Assistant
                 assistant.messages = parsed.messages;
             }
         } catch (err) {
-            console.error('Load error');
+            // console.error('Load error');
         }
     }
 };
