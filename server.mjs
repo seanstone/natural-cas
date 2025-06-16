@@ -6,8 +6,7 @@ import path from 'path';
 import { WebSocketServer } from 'ws';
 import { fileURLToPath } from 'url';
 import Models from './models.json' with { type: 'json' };
-import Assistant from "./src/cas-assistant.mjs";
-import CASToolbox from "./src/cas-toolbox.mjs";
+import Assistant from "./src/algebra-assistant.mjs";
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -79,7 +78,6 @@ wss.on('connection', ws => {
 
 await Assistant.load("logs");
 for (const name in Assistant.chats) {
-    Assistant.chats[name].toolbox = new CASToolbox();
     Assistant.chats[name].on_message = (name, message) => on_message(name, message);
 }
 

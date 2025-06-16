@@ -1,13 +1,13 @@
 "use strict";
 import Assistant from "./assistant.mjs";
-import CASToolbox from "./cas-toolbox.mjs";
+import Toolbox from "./algebra-toolbox.mjs";
 
-export default class CASAssistant extends Assistant
+export default class AlgebraAssistant extends Assistant
 {
     constructor(model)
     {
         super(model);
-        this.toolbox = new CASToolbox();
+        this.toolbox = new Toolbox();
         this.prompt(`When given a math expression, calculate the result only using the given function tools.
 Always pass as arguments the exact number obtained from the initial expression or the result of function calls (do not truncate, approximate).
 Reply with the answer only.
