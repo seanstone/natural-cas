@@ -67,7 +67,7 @@ append_message(message)
             temp.innerHTML = `<div class="chat chat-end">
                 <div class="chat-bubble bg-amber-100 hover:bg-amber-200 hover:cursor-pointer">
                     <div class="text-sm uppercase font-semibold text-gray-500">Tool result</div>
-                    <div class="text-blue-800 font-mono">${message.content}</div>
+                    <div class="text-blue-800 font-mono">${message.content.replaceAll("\n", "<br>")}</div>
                 </div>
             </div>`
             document.getElementById("chat").appendChild(temp.firstElementChild);
