@@ -54,7 +54,7 @@ append_message(message)
         if (message.content) {
             const temp = document.createElement('div');
             temp.innerHTML = `<div class="chat chat-end">
-                <div class="chat-bubble bg-green-300 hover:bg-green-400 hover:cursor-pointer text-black">
+                <div class="chat-bubble bg-stone-200 hover:bg-stone-300 hover:cursor-pointer text-black">
                     ${message.content.replaceAll("\n", "<br>")}
                 </div>
             </div>`
@@ -87,7 +87,7 @@ append_message(message)
             for (const tool_call of message.tool_calls) {
                 const temp = document.createElement('div');
                 temp.innerHTML = `<div class="chat chat-start">
-                    <div class="chat-bubble bg-orange-200 hover:bg-orange-300 hover:cursor-pointer">
+                    <div class="chat-bubble bg-orange-100 hover:bg-orange-200 hover:cursor-pointer">
                         <div class="text-sm uppercase font-semibold text-gray-500">Tool call</div>
                         <div class="text-blue-800 font-mono">${tool_call.function.name}(${tool_call.function.arguments})</div>
                     </div>
@@ -166,11 +166,11 @@ add_chat(chat)
     this.chats[chat.name] = chat;
 
     const temp = document.createElement('div');
-    temp.innerHTML = `<li class="list-row hover:bg-gray-800 hover:cursor-pointer">
+    temp.innerHTML = `<li class="list-row bg-stone-300 text-gray-900 hover:bg-stone-400 hover:cursor-pointer mt-1 ml-1 mr-1">
         <div class="list-col-grow">${title}</div>
         <div class="text-right">
             <div class="badge bg-cyan-600">${chat.model}</div>
-            <div class="text-gray-400 pr-1">${timestring}</div>
+            <div class="text-gray-500 pr-1">${timestring}</div>
         </div>
     </li>`;
     temp.firstElementChild.chat_name = chat.name;

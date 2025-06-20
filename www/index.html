@@ -7,32 +7,32 @@
         <link rel="stylesheet" href="./index.css">
         <script type = "module" src="index.mjs"></script>
     </head>
-    <body class="h-screen w-screen bg-gray-300 overflow-hidden flex">
+    <body class="h-screen w-screen overflow-hidden flex">
         <!-- Tool Panel (Left) -->
-        <div class="w-180 bg-gray-600 p-4 flex flex-col">
+        <div class="w-120 bg-stone-200 p-4 flex flex-col">
             <!-- Your tool panel content -->
             <div class="flex pr-4">
-                <h2 class="text-xl font-semibold mb-4 inline-block flex-1">Natural CAS</h2>
+                <h2 class="text-xl text-gray-900 font-semibold mb-4 inline-block flex-1">Natural CAS</h2>
             </div>
             <div class="w-full flex-1 overflow-y-auto">
-                <ul id="chats" class="list bg-base-100 rounded-box shadow-md">
+                <ul id="chats" class="list bg-stone-200 rounded-box shadow-md">
                 </ul>
             </div>
         </div>
 
         <!-- Main Display (Right) -->
-        <div class="flex-1 bg-gray-500 flex flex-col">
-            <div id="chat" class="flex-1 bg-gray-500 p-4 overflow-y-auto">
+        <div class="flex-1 flex flex-col">
+            <div id="chat" class="flex-1 bg-stone-100 p-4 overflow-y-auto">
             </div>
-            <div class="w-full pt-4 pl-4 pr-4 bg-gray-700 flex">
+            <div class="w-full pt-4 pl-4 pr-4 bg-stone-200 flex">
                 <span class="flex-1"></span>
-                <select id="model" class="select inline-block text-lg">
-                <button id="new" class="btn text-xl ml-2">+</button>
+                <select id="model" class="select inline-block text-lg bg-zinc-500">
+                <button id="new" class="btn text-xl ml-2 bg-zinc-500">+</button>
             </div>
-            <div class="min-h-20 bg-gray-700 pl-4 pr-4 pb-4 pt-2">
+            <div class="min-h-20 bg-stone-200 pl-4 pr-4 pb-4 pt-2">
                 <div class="h-full w-full flex">
-                    <textarea id="input" class="textarea h-full flex-1 text-lg"></textarea>
-                    <button id="submit" class="btn btn-info w-12 text-xl ml-2 my-auto h-full">➤</button>
+                    <textarea id="input" class="textarea h-full flex-1 text-lg bg-stone-300 text-gray-900"></textarea>
+                    <button id="submit" class="btn btn-info bg-cyan-500 w-12 text-xl ml-2 my-auto h-full">➤</button>
                 </div>
             </div>
         </div>
